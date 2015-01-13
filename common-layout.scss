@@ -1,0 +1,14 @@
+#wiki_page_show {
+	.row 					{margin: 0 auto;}
+	.row + .row 			{padding-top: 15px;}
+
+	.column 				{float: left;}
+	.column + .column 		{margin-left: 2%;}
+				
+	.column.full 			{width: 100%;}
+	.column.three-fourths 	{width: 74.5%;} 	
+	.column.two-thirds		{width: 66%;} 
+	.column.half 			{width: 49%;} 
+	.column.one-third 		{width: 32%;} 
+	.column.one-fourth 		{width: 23.5%;}  
+}
