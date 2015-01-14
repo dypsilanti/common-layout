@@ -10,5 +10,18 @@
 	.column.two-thirds		{width: 66%;} 
 	.column.half 			{width: 49%;} 
 	.column.one-third 		{width: 32%;} 
-	.column.one-fourth 		{width: 23.5%;}  
+	.column.one-fourth 		{width: 23.5%;}
+	
+	.container {
+		width: 100%;
+		padding: 20px 4%;
+		box-sizing: border-box;
+	}
+	
+	.content {
+		padding: 10px 2%;
+		background: #FCFCFC;
+		border-radius: 3px;
+		border: 1px solid #D3D3D3;
+	}
 }
