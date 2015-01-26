@@ -1,4 +1,5 @@
-#wiki_page_show {
+// #content is for pages and discussions
+#content {
 	.row 					{margin: 0 auto;}
 	.row + .row 			{padding-top: 15px;}
 
@@ -12,6 +13,28 @@
 	.column.one-third 		{width: 32%;} 
 	.column.one-fourth 		{width: 23.5%;}
 	
+	// .caption creates a floated right link caption for images
+	.caption {
+		a {
+			font-size: small;
+			display: block;
+			text-align: right;
+		}
+				
+		img {max-width: 100% !important;}
+				
+		p:first-child {
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+		p:last-child {
+			margin: 0;
+		}
+	} // .caption
+} // #content
+
+// #wiki_page_show is for pages only
+#wiki_page_show {	
 	.container {
 		width: 100%;
 		padding: 20px 4%;
