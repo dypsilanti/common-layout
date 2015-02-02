@@ -13,6 +13,11 @@
 	.column.one-third 		{width: 32%;} 
 	.column.one-fourth 		{width: 23.5%;}
 	
+	img {
+		width: auto;
+		max-width: 100% !important;
+	}
+	
 	// .caption creates a floated right link caption for images
 	.caption {
 		a {
@@ -20,8 +25,6 @@
 			display: block;
 			text-align: right;
 		}
-				
-		img {max-width: 100% !important;}
 				
 		p:first-child {
 			padding-bottom: 0;
