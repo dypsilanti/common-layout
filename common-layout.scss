@@ -1,5 +1,19 @@
-// #content is for pages and discussions
+//=================
+// #content helps styles target wiki pages and discussions
+//=================
 #content {
+	
+	// removes padding for wiki page content area 	
+	.show-content {padding: 0;}
+			
+	//=================
+	// TYPOGRAPHY
+	//=================
+	-webkit-font-smoothing: antialiased;
+
+	//=================
+	// ROWS and COLUMNS
+	//=================
 	.row 					{margin: 0 auto;}
 	.row + .row 			{padding-top: 15px;}
 
@@ -13,18 +27,35 @@
 	.column.one-third 		{width: 32%;} 
 	.column.one-fourth 		{width: 23.5%;}
 	
+	// BREAKPOINTS 
+	@media screen and (max-width: 1300px) {
+		.column.full,
+		.column.three-fourths,
+		.column.two-thirds,
+		.column.half,
+		.column.one-third,
+		.column.one-fourth {
+			margin: 0px;
+			margin-bottom: 10px;
+			width: 100%;
+		}
+	} //end @media
+				
+	//=================
+	// IMAGES
+	//=================
 	img {
+		border: 1px solid rgb(180, 180, 180);
 		max-width: 100% !important;
 	}
-	
-	// .caption creates a floated right link caption for images
-	.caption {
+		
+	// img.caption creates a floated right link caption for images
+	img.caption {
 		a {
 			font-size: small;
 			display: block;
 			text-align: right;
 		}
-				
 		p:first-child {
 			padding-bottom: 0;
 			margin-bottom: 0;
@@ -32,11 +63,130 @@
 		p:last-child {
 			margin: 0;
 		}
-	} // .caption
-} // #content
-
-// #wiki_page_show is for pages only
-#wiki_page_show {	
+	} // end img.caption
+	
+	// removes style for small, inline, canvas generated images
+	span.instructure_file_link_holder.link_holder img {border: inherit;}
+	
+	//=================
+	// HEADINGS (H1 H2 H3 H4)
+	//=================
+	h1, 
+	h2, 
+	h3,	h4 {font-family: 'Lato', sans-serif;}
+	
+	// targets canvas-generated page title
+	h1.page-title {
+		font-size: 4em;
+		color: white;
+		padding: 10px 4.5%;
+		margin: 0;
+	}
+				
+	h2 {border-bottom: 2px solid #6CADD9;}
+	
+	// targets canvas-generated course title, appears on front page
+	h2.course-title {
+		color: white;
+		font-weight: 100;
+		font-family: "Lato", sans-serif;
+	}
+	.header-bar {background: #6CADD9;}
+			
+	h3 {
+		line-height: 24px; 
+		border-bottom: 2px solid  #e5e5e5;
+	}
+	
+	//=================
+	// COURSE HEADER
+	//=================
+	// wraps around .prof photo and .title
+	.head {
+		font-family: 'Lato', sans-serif;
+		min-height: 200px;
+	}
+	// instructor's photo
+	.prof {
+		width: 200px;
+		height: 200px;
+		position: absolute;
+	}
+	// course and instructor's name
+	.title {
+		padding-left: 220px;
+		color: white;
+		
+		// course name
+		h2 {
+			font-size: 400%;
+			font-weight: 600;
+			line-height: 1em;
+			margin: 0;
+		}
+		
+		// instructor's name
+		h4 {font-size: 250%;}
+	}
+	@media screen and (max-width: 1300px) {
+		.title {
+			h2 {font-size: 250%;}
+			h4 {font-size: 200%;}
+		} // end .title
+	} // end @media
+	
+	//=================
+	// MODULE NAVIGATION
+	//=================	
+	.button {
+		width: 150px;
+		height: 150px;
+		margin: 0 0 60px 2.5%;
+		
+		a {
+			font-family: "Lato",sans-serif;
+			font-size: 18px;
+			text-decoration: none;
+			display: block;
+			padding: 150px 0px 0px 0px;
+			text-align: center;
+			position: relative;
+			top: 10px;
+		}
+	}
+	
+	//=================
+	// WIKI PAGE
+	//=================
+	// wiki page navigation
+	ul.nav li {
+		font-family: "Lato", sans-serif;
+		float: left;
+		margin: 0 10px 10px 0;
+		
+		a {color: #333;}
+	}
+	// Using max-width keeps the iframe from getting cut-off by
+	// Canvas's default "overflow: hidden" when in smaller columns, 
+	// but keeps the video's orignal dimensions in larger columns. 
+	iframe {max-width: 100%}  
+	
+	//=================
+	// SUBTITLE 
+	// .subtitle background-color is defined in respective templates
+	//=================
+	.subtitle p {
+		color: white;
+		letter-spacing: .08em;
+		font-weight: 300;
+		font-size: 1.5em;
+		padding: 0 0 10px 4.5%;
+		margin: 0;
+	}
+	
+	//=================
+	// CONTAINER (sets background for templates)
+	//=================
 	.container {
 		width: 100%;
 		padding: 20px 4%;
@@ -45,6 +195,9 @@
 		min-height: 288px;
 	}
 	
+	//=================
+	// CONTENT BOXES (styles columns which content is in)
+	//=================
 	.content {
 		padding: 10px 2%;
 		background: #FCFCFC;
@@ -52,6 +205,9 @@
 		border: 1px solid #D3D3D3;
 	}
 	
+	//=================
+	// PARAGRAPHS
+	//=================
 	p {
 		letter-spacing: .01em;
 		line-height: 1.3em;
@@ -59,4 +215,76 @@
 		margin: 10px 0 5px 0;
 		font-size: 1.35em;
 	}
-} // #wiki_page_show
+	
+	//=================
+	// LISTS
+	//=================
+	ul {font-size: 1.35em;}
+	
+	li {margin-top: 10px;
+		p {
+			font-size: inherit;
+		}
+	}
+	
+	//=================
+	// LINKS
+	//=================
+	a {	
+		color: #0066cc;
+		text-decoration: underline;
+		transition: color .25s;
+			
+		&:hover {color: #ff9d42;}
+	}
+	
+	//=================
+	// TABLES
+	//=================
+	table#menu {
+		margin: 20px auto;
+		text-align: center;
+		
+		tbody {background-color: whitesmoke;}
+		
+		tr:first-child {
+			width: auto;
+			height: auto;
+			font-family: "Lato", sans-serif;
+			background-color: #6CADD9;
+			color: white;
+			font-size: 18px;
+			letter-spacing: .1em;
+			font-weight: 300;
+		}
+		td {
+			border: 2px solid #fdfdfd;
+			padding: 10px;
+		}
+	} // end tables#menu
+	
+	//=================
+	// QUIZ and ASSIGNMENT
+	//=================
+	// Quiz Header
+	.quiz-header h1:first-child,
+	// Assignment Header
+	#assignment_show h1.title {
+		padding: 10px;
+		font-weight: 300;
+		color: white;
+		font-family: "Lato", sans-serif;
+	}
+	
+	// =================
+	// DISCUSSIONS
+	// =================
+	#discussion_topic {
+		// dicussion title font color
+		h1.discussion-title,
+		header.discussion-section .discussion-pubdate {color: white;}
+		
+		a.avatar,
+		a.author {display: none;}
+	}
+} // end #content
