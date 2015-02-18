@@ -1,10 +1,17 @@
 //=================
 // #content helps styles target wiki pages and discussions
 //=================
-#content {
+#wiki_page_show {
 	
-	// removes padding for wiki page content area 	
-	.show-content {padding: 0;}
+
+	// padding for wiki page content area 	
+	.show-content {
+		padding: 20px;
+		top: -1px;
+	}
+	
+	// hides borders and guides from wysiwyg editor
+	#invs {display: none;}
 			
 	//=================
 	// TYPOGRAPHY
@@ -81,6 +88,13 @@
 		color: white;
 		padding: 10px 4.5%;
 		margin: 0;
+		line-height: 1em;
+		background-color: #6CADD9;
+		
+		width: calc(100% + 20px);
+		position: relative;
+		top: -20px;
+		left: -20px;
 	}
 				
 	h2 {border-bottom: 2px solid #6CADD9;}
@@ -88,7 +102,6 @@
 	// targets canvas-generated course title, appears on front page
 	h2.course-title {
 		color: white;
-		font-weight: 100;
 		font-family: "Lato", sans-serif;
 	}
 	.header-bar {background: #6CADD9;}
@@ -136,6 +149,28 @@
 	} // end @media
 	
 	//=================
+	// LINKS
+	//=================
+	.show-content a {	
+		color: #0066cc;
+		text-decoration: underline;
+		transition: color .25s;
+			
+		&:hover {color: #ff9d42;}
+	}
+	
+	// TEST YOUR SYSTEM LINK ON STUDENT GUIDES PAGE https://ufl.instructure.com/courses/200041/pages/proctored-exams-student-guide 
+	a#test {
+		background-color: #91e69e;
+		border: 1px solid #508c5c;
+		border-radius: 3px;
+		padding: 10px;
+		font-family: "Lato", sans-serif;
+		font-size:18px;
+		color: black;
+	}
+	
+	//=================
 	// MODULE NAVIGATION
 	//=================	
 	.button {
@@ -164,8 +199,12 @@
 		float: left;
 		margin: 0 10px 10px 0;
 		
-		a {color: #333;}
+		a {
+			color: #333;
+			text-decoration: none;
+		}
 	}
+
 	// Using max-width keeps the iframe from getting cut-off by
 	// Canvas's default "overflow: hidden" when in smaller columns, 
 	// but keeps the video's orignal dimensions in larger columns. 
@@ -213,29 +252,27 @@
 		line-height: 1.3em;
 		word-spacing: 0.05em;
 		margin: 10px 0 5px 0;
-		font-size: 1.35em;
+		font-size: 1.2em;
+	}
+	
+	//=================
+	// BLOCKQUOTE
+	//=================
+	blockquote {
+		font-size: 16px;
+		font-style: italic;
 	}
 	
 	//=================
 	// LISTS
 	//=================
-	ul {font-size: 1.35em;}
+	ul, ol {font-size: 1.2em;}
 	
 	li {margin-top: 10px;
+		
 		p {
 			font-size: inherit;
 		}
-	}
-	
-	//=================
-	// LINKS
-	//=================
-	a {	
-		color: #0066cc;
-		text-decoration: underline;
-		transition: color .25s;
-			
-		&:hover {color: #ff9d42;}
 	}
 	
 	//=================
@@ -255,7 +292,6 @@
 			color: white;
 			font-size: 18px;
 			letter-spacing: .1em;
-			font-weight: 300;
 		}
 		td {
 			border: 2px solid #fdfdfd;
@@ -276,15 +312,38 @@
 		font-family: "Lato", sans-serif;
 	}
 	
-	// =================
-	// DISCUSSIONS
-	// =================
-	#discussion_topic {
-		// dicussion title font color
-		h1.discussion-title,
-		header.discussion-section .discussion-pubdate {color: white;}
-		
-		a.avatar,
-		a.author {display: none;}
+	//=================
+	// CALL OUTSFLEXIBLE EXAM TIME WARNING ON STUDENT GUIDES PAGE https://ufl.instructure.com/courses/200041/pages/proctored-exams-student-guide 
+	//=================
+	p#important {
+		background-color: #fff0cc;
+		border: 1px solid #ffa300;
+		border-radius: 3px;
+		margin: 10px 20px;
+		padding: 10px;
+		padding-left: 85px !important; 
+		font-family: "Lato", sans-serif;
+		background: url("/img/inline_icons/important.png")  #fff0cc no-repeat left center;
+		background-position: 3%;
 	}
-} // end #content
+} // end #wiki_page_show
+
+// =================
+// DISCUSSIONS
+// =================
+#discussion_topic {
+	p {font-size: 1.2em;}
+	
+	.entry-content{padding-bottom: 20px;}
+	
+	// dicussion title font color
+	h1.discussion-title,
+	header.discussion-section {
+		margin-bottom: 10px;
+		color: white;
+		.discussion-pubdate {color: white;}
+	}
+	
+	a.avatar,
+	a.author {display: none;}
+} // end .#discussion_topic
