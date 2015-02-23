@@ -1,22 +1,55 @@
 //=================
-// #content helps styles target wiki pages and discussions
+// #content targets both wiki pages and discussions
 //=================
-#wiki_page_show {
+#content {
 	
-
-	// padding for wiki page content area 	
-	.show-content {
-		padding: 20px;
-		top: -1px;
+	//=================
+	// IMAGES
+	//=================
+	img {
+		border: 1px solid rgb(180, 180, 180);
+		max-width: 100% !important;
 	}
+		
+	// img.caption creates a floated right link caption for images
+	img.caption {
+		a {
+			font-size: small;
+			display: block;
+			text-align: right;
+		}
+		p:first-child {
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+		p:last-child {
+			margin: 0;
+		}
+	} // end img.caption
 	
-	// hides borders and guides from wysiwyg editor
-	#invs {display: none;}
-			
 	//=================
 	// TYPOGRAPHY
 	//=================
 	-webkit-font-smoothing: antialiased;
+	
+	//=================
+	// PARAGRAPHS
+	//=================
+	p {
+		letter-spacing: .01em;
+		line-height: 1.3em;
+		word-spacing: 0.05em;
+		margin: 10px 0 5px 0;
+		font-size: 16px;
+	}
+	
+	//=================
+	// BLOCKQUOTE
+	//=================
+	blockquote {
+		font-size: 16px;
+		font-style: italic;
+	}
 
 	//=================
 	// ROWS and COLUMNS
@@ -47,31 +80,29 @@
 			width: 100%;
 		}
 	} //end @media
-				
-	//=================
-	// IMAGES
-	//=================
-	img {
-		border: 1px solid rgb(180, 180, 180);
-		max-width: 100% !important;
-	}
-		
-	// img.caption creates a floated right link caption for images
-	img.caption {
-		a {
-			font-size: small;
-			display: block;
-			text-align: right;
-		}
-		p:first-child {
-			padding-bottom: 0;
-			margin-bottom: 0;
-		}
-		p:last-child {
-			margin: 0;
-		}
-	} // end img.caption
 	
+	//=================
+	// LISTS
+	//=================
+	ul, ol {font-size: 16px;}
+	
+	li {margin-top: 10px;}
+} //end #content
+
+//=================
+// #wiki_page_show targets only wiki pages
+//=================
+#wiki_page_show {
+	
+	// padding for wiki page content area 	
+	.show-content {
+		padding: 20px;
+		top: -1px;
+	}
+	
+	// hides borders and guides from wysiwyg editor
+	#invs {display: none;}
+			
 	// removes style for small, inline, canvas generated images
 	span.instructure_file_link_holder.link_holder img {border: inherit;}
 	
@@ -242,37 +273,6 @@
 		background: #FCFCFC;
 		border-radius: 3px;
 		border: 1px solid #D3D3D3;
-	}
-	
-	//=================
-	// PARAGRAPHS
-	//=================
-	p {
-		letter-spacing: .01em;
-		line-height: 1.3em;
-		word-spacing: 0.05em;
-		margin: 10px 0 5px 0;
-		font-size: 1.2em;
-	}
-	
-	//=================
-	// BLOCKQUOTE
-	//=================
-	blockquote {
-		font-size: 16px;
-		font-style: italic;
-	}
-	
-	//=================
-	// LISTS
-	//=================
-	ul, ol {font-size: 1.2em;}
-	
-	li {margin-top: 10px;
-		
-		p {
-			font-size: inherit;
-		}
 	}
 	
 	//=================
