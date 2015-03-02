@@ -191,14 +191,17 @@
 	}
 	
 	// TEST YOUR SYSTEM LINK ON STUDENT GUIDES PAGE https://ufl.instructure.com/courses/200041/pages/proctored-exams-student-guide 
-	a#test {
+	p#test {
 		background-color: #91e69e;
 		border: 1px solid #508c5c;
 		border-radius: 3px;
 		padding: 10px;
 		font-family: "Lato", sans-serif;
-		font-size:18px;
-		color: black;
+		width: 140px;
+		
+		a {
+			text-decoration: none;
+			color: black;}
 	}
 	
 	//=================
@@ -262,7 +265,7 @@
 		padding: 20px 4%;
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
-		min-height: 288px;
+		min-height: 404px;
 	}
 	
 	//=================
@@ -319,11 +322,10 @@
 		background-color: #fff0cc;
 		border: 1px solid #ffa300;
 		border-radius: 3px;
-		margin: 10px 20px;
 		padding: 10px;
-		padding-left: 85px !important; 
+		padding-left: 95px; 
 		font-family: "Lato", sans-serif;
-		background: url("/img/inline_icons/important.png")  #fff0cc no-repeat left center;
+		background: url("img/inline_icons/important.png")  #fff0cc no-repeat left center;
 		background-position: 3%;
 	}
 } // end #wiki_page_show
