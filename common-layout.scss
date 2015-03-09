@@ -11,12 +11,12 @@
 		max-width: 100% !important;
 	}
 		
-	// img.caption creates a floated right link caption for images
-	img.caption {
+	// .caption creates a floated right link caption for images, only to be used to wrap img tags
+	.caption {
 		a {
 			font-size: small;
 			display: block;
-			text-align: right;
+			text-align: left;
 		}
 		p:first-child {
 			padding-bottom: 0;
