@@ -173,7 +173,9 @@
 		}
 		
 		// instructor's name
-		h4 {font-size: 250%;}
+		h4 {
+			line-height: 1em;
+			font-size: 250%;}
 	}
 	@media screen and (max-width: 1300px) {
 		.title {
