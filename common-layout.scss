@@ -307,18 +307,6 @@
 		}
 	} // end tables#menu
 	
-	//=================
-	// QUIZ and ASSIGNMENT
-	//=================
-	// Quiz Header
-	.quiz-header h1:first-child,
-	// Assignment Header
-	#assignment_show h1.title {
-		padding: 10px;
-		font-weight: 300;
-		color: white;
-		font-family: "Lato", sans-serif;
-	}
 	
 	//=================
 	// CALL OUTSFLEXIBLE EXAM TIME WARNING ON STUDENT GUIDES PAGE https://ufl.instructure.com/courses/200041/pages/proctored-exams-student-guide 
@@ -334,6 +322,20 @@
 		background-position: 3%;
 	}
 } // end #wiki_page_show
+
+//=================
+// QUIZ and ASSIGNMENT
+//=================
+// Quiz Header
+h1#quiz_title,
+// Assignment Header
+#assignment_show h1.title {
+	padding: 10px;
+	font-weight: 300;
+	color: white;
+	font-family: "Lato", sans-serif;
+	background-color: #6CADD9;
+}
 
 // =================
 // DISCUSSIONS
