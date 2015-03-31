@@ -44,6 +44,8 @@
 	.column.one-third 		{width: 32%;} 
 	.column.one-fourth 		{width: 23.5%;}
 	
+
+	
 	// BREAKPOINTS 
 	@media screen and (max-width: 1300px) {
 		.column.full,
@@ -71,7 +73,6 @@
 //=================
 #wiki_page_show {
 	
-	
 	//=================
 	// IMAGES
 	//=================
@@ -80,7 +81,7 @@
 		max-width: 100% !important;
 		margin-top: 10px;
 	}
-		
+	
 	// .caption creates a floated right link caption for images, only to be used to wrap img tags
 	.caption {
 		a {
@@ -341,6 +342,16 @@ h1#quiz_title,
 // DISCUSSIONS
 // =================
 #discussion_topic {
+	
+	//=================
+	// IMAGES
+	//=================
+	img {
+		border: 1px solid rgb(180, 180, 180);
+		max-width: 100% !important;
+		margin-top: 10px;
+	}
+	
 	p {font-size: 1.2em;}
 	
 	.entry-content{padding-bottom: 20px;}
