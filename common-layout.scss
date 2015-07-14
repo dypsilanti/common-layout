@@ -87,7 +87,7 @@
 		a {
 			font-size: small;
 			display: block;
-			text-align: left;
+			text-align: right;
 		}
 		p:first-child {
 			padding-bottom: 0;
@@ -156,8 +156,8 @@
 	}
 	// instructor's photo
 	.prof {
-		width: 200px;
-		height: 200px;
+		width: 190px;
+		height: 190px;
 		position: absolute;
 	}
 	// course and instructor's name
